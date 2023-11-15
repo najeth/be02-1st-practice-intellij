@@ -1,4 +1,4 @@
-<h1 align="center">주제 👍</h1>
+<h1 align="center">학생들에게 보여주기 위한 프로젝트 👍</h1>
 
 
 <div align="center">
@@ -6,43 +6,86 @@
 </div>
 
 
-> [플레이 데이터] 한화시스템 BEYOND SW캠프 / 팀명
+
+> [플레이 데이터] 한화시스템 BEYOND SW캠프 / 강사팀
 
 
 🎬[Demo 시연영상](https://www.youtube.com/watch?v=dhMrKTwNI8U&lc=UgzCJR3WxkvsckRyyO94AaABAg&ab_channel=%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B4%EC%84%9C%EB%B0%B0%EC%9A%B0%EB%8A%94IT)   
-📃[프로젝트 회고록](블로그주소) 
+📃[프로젝트 회고록](블로그주소)
 
 <br>
 
 ## ✨ 프로젝트 설명
 
 ```sh
-~~~는 어쩌고 저쩌고 서비스 입니다.
+학생들에게 보여주기위한 프로젝트이라서 이런 저런 서비스 다 있음
 ```
 
 ## 📌 프로젝트 목표
 
 ```sh
-어떤 어떤 기술을 활용해 어떤 걸 구현하려 했다
+Centos 8, Mysql(InnoDB)를 이용하여 개념 -> 논리 -> 물리 설계를 거친 DB를 구축
 ```
 
 
 ## 🔍 Overview
 
-### 1. 사용자 회원 가입 및 로그인 기능(토큰 인증 방식)
+### 1. 회원 기능
+##### 1-1. 회원가입
 
-<center>
-    <img src="./img/pic2.png" />
-</center>
-JWT를 이용한 토큰 인증 방식
+```sh
+INSERT INTO users_user (password, email, profile, username) VALUE('~~','~~','~~','~~');
+```
+
+전
+<div align="center">
+    <img src="./img/가입_전.png" />
+</div>
+후
+<div align="center">
+    <img src="./img/가입_후.png" />
+</div>
+
+##### 1-2 이메일 인증
+
+```sh
+UPDATE account_emailaddress SET verified=1 WHERE id=3;
+```
+
+전
+<div align="center">
+    <img src="./img/인증_전.png" />
+</div>
+후
+<div align="center">
+    <img src="./img/인증_후.png" />
+</div>
+
+##### 1-3. 로그인
+
+```sh
+SELECT users_user.email, users_user.password, account_emailaddress.verified 
+FROM users_user 
+LEFT OUTER JOIN account_emailaddress ON users_user.email = account_emailaddress.email  
+WHERE users_user.email='메일주소';
+```
+인증 전 로그인
+<div align="center">
+    <img src="./img/인증_전_로그인.png" />
+</div>
+
+인증 후 로그인
+<div align="center">
+    <img src="./img/인증_후_로그인.png" />
+</div>
 
 <br>
 
 ### 2. 게시판 기능
 
-<center>
-    <img src="./img/pic1.png" />
-</center>
+<div align="center">
+    <img src="./img/pic2.png" />
+</div>
 어떤 어떤 어떤 걸 작성하는 게시판 기능
 
 <br>
@@ -50,9 +93,9 @@ JWT를 이용한 토큰 인증 방식
 
 ## System Architecture
 
-<center>
+<div align="center">
     <img src="./img/pic2.png" />
-</center>
+</div>
 대용량 트래픽을 고려한 서버 이중화
 
 <br>
