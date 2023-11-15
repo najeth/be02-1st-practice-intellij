@@ -1,10 +1,9 @@
 <h1 align="center">주제 👍</h1>
 
 
-<center>
-    <img src="./img/pic1.png"  style="zoom:76%;" align="center"/>
-</center>
-
+<div align="center">
+  <img src="./img/pic1.png"  style="zoom:76%;" align="center"/>
+</div>
 
 
 > [플레이 데이터] 한화시스템 BEYOND SW캠프 / 팀명
