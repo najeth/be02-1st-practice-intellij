@@ -34,7 +34,7 @@ Centos 8, Mysql(InnoDB)를 이용하여 설계를 통한 ERD 작성 및 구현
 
 ## 🐧 프로젝트 구현
 
-> 🏢 ERD
+> ### 🏢 **ERD**
 
 <div align="center">
   <img src="./img/erd.png"  style="zoom:76%;" align="center"/>
@@ -42,7 +42,7 @@ Centos 8, Mysql(InnoDB)를 이용하여 설계를 통한 ERD 작성 및 구현
 
 ----------
 
-> 💻 Keepalived를 활용한 Ative-Standby 서버 이중화
+> ### 💻 **Keepalived를 활용한 Ative-Standby 서버 이중화**
 - 마스터에 쓰기 작업시 슬레이브로 자동 복사
 <div align="center">
   <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*SSOwwe-DvvR1Z5m-taVvLw.gif"  style="zoom:76%;" align="center"/>
