@@ -48,6 +48,8 @@ Centos 8, Mysql(InnoDB)를 이용하여 설계를 통한 ERD 작성 및 구현
   <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*SSOwwe-DvvR1Z5m-taVvLw.gif"  style="zoom:76%;" align="center"/>
 </div>
 
+<br>
+
 - 마스터에 장애 발생시 자동으로 Standby 서버가 활성화
 <div align="center">
   <img src="https://percona.com/blog/wp-content/uploads/2020/04/UghjSBIJoL.gif"  style="zoom:76%;" align="center"/>
